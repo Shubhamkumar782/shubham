@@ -1,0 +1,87 @@
+
+a)cd "path where we want to have cloned repo"b) git clone  ssh path copied from bitbucket
+c) git status -( to check whether there is changes in my local repo compare to Bitbucket repo)
+d) git pull - ( to pull required changes in my local repo from Bitbucket)
+e) mkdir temp(e.g) -( this will create temp dir )
+
+f) To add ssh key in git-   
+
+1) eval $(ssh-agent)   
+2) ssh-add ~/.ssh/myssh.txt   
+
+
+for changing back in dir cd ..(space between cd & ..)
+
+__________________________________________________________________
+
+create virtual env
+D:\Users\SKuma557\AppData\Local\Programs\Python\Python39\python.exe -m venv myvenv
+
+__________________________________________________________________
+
+to activate env
+1) go in file-transformation-component by cd2) >"D:\Users\SKuma557\PycharmProjects\myvenv\Scripts\activate.bat"   -----> this will activate myvenv for file-transformation-component.
+
+
+__________________________________________________________________
+
+to run script
+
+1) go to "test-isaac" by cd which is main dir  then
+2) install packages in editable mode-  pip install -e data-safeguarding\ -e file-transformation\
+3) then go to file-transformation-component by cd
+4) then run this >python main.py input masking                        
+to go in root-
+sudo su -
+
+
+----------------------------------------Add new files in Git--------------------------------------------------------
+
+
+A) Create repo in given project using + sign.
+B) Open Git bash in the folder that we want to upload.C) Run -->  Git init.
+D) Add ssh key.         To add ssh key in git-       1) eval $(ssh-agent)       2) ssh-add ~/.ssh/myssh.txt
+E) copy https key from clone of that repo.
+F) Run --> git remote add origin copied_https_key
+G) Run --> git add .
+H) Run --> git commit -m "commet"I) Run --> git push -u origin main                       ## origin is constant and main is the branch where we want to have our repo and it's code.
+
+Isaac hostname
+HostName=@awsbqynval0002
+
+1) cp .env.example .env
+2)docker-compose build
+3)docker login jaol-docker.artifactrepo.jnj.com
+4)docker push jaol-docker.artifactrepo.jnj.com/daa-components/file_transform:latest
+
+[9/13 1:33 PM] Shubham Kumar
+1)To list content of a s3 folderaws s3 ls  s3://devmlops-cmsmedia/hria/input/aws s3 ls  s3://devmlops-cmsmedia/hria/output/
+
+
+2) To remove content of a s3 folder
+aws s3 rm --recursive s3://devmlops-cmsmedia/hria/input/
+aws s3 rm --recursive s3://devmlops-cmsmedia/hria/output/
+
+
+3) To copy files from local to s3 folder
+aws s3 cp input/xml/files/ --recursive s3://devmlops-cmsmedia/hria/input/aws s3 cp input/test.xml  s3://devmlops-cmsmedia/hria/input/
+
+
+4) To copy files from s3 folder to local
+
+working - aws s3 cp  --recursive s3://devmlops-cmsmedia/hria/input/ input/xml/files/aws s3 cp s3://devmlops-cmsmedia/hria/input/ input/test.xml  
+
+
+input-s3://devmlops-cmsmedia/daa-files/hria/input/demo/20052022/
+
+output-s3://devmlops-cmsmedia/daa-files/hria/output/masking/20052022/
+
+
+To run script in command prompt
+
+D:\Users\SKuma557>cd PycharmProjects
+
+D:\Users\SKuma557\PycharmProjects>cd test-isaac
+
+D:\Users\SKuma557\PycharmProjects\test-isaac>"D:\Users\SKuma557\PycharmProjects\myvenv\Scripts\activate.bat"
+
